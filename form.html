@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title></title>
+    
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="text-center">
+    
+<form action="/api/students"   class="form-signin" method = "POST">
+    <h1 class="h1 mb-3 font-weight-bold">NEW STUDENT</h1>
+
+    <input type="text" name = "name"  class="form-control top" placeholder="Student Name" required autofocus pattern="^[-'a-zA-Z]*$" title="only letters in both cases, apostrophe and dashes are allowed" >
+    <input type="text" name = "code" class="form-control bottom" placeholder="Code" required pattern=".{7,}" title="7 characters minimum">
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+</form>
+
+<form action="/api/courses"   class="form-signin" method = "POST">
+    <h1 class="h1 mb-3 font-weight-bold"> NEW COURSE </h1>
+
+    <input type="text" name = "name"  class="form-control top" placeholder="Course Name" required autofocus pattern=".{5,}" title="5 characters minimum">
+    <input type="text" name = "code" class="form-control middle" placeholder="Code" required pattern="[a-zA-Z]{3}\d{3}" title="3 characters minimum followed by 3 digit">
+    <input type="text" name = "description" class="form-control bottom" placeholder="Description" required>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
